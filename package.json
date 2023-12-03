@@ -10,6 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2"
   }
-
 }

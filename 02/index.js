@@ -52,17 +52,15 @@ input.forEach((game) => {
 })
 
 const compatibleGame = games.filter(i => !incompatibleGame.includes(i))
-
 const res = compatibleGame.map(g => parseInt(g)).reduce((s, a) => s + a, 0);
 
-console.log(res);
+console.log('Part 1 :'+res);
 
 // part 2 ---------------------------------------
 
 let res2 = 0;
 input.forEach((game) => {
     const temp = game.split(":");
-    const gameID = temp[0].split(' ')[1];
     let lowest_blue = 0;
     let lowest_green = 0;
     let lowest_red = 0;
@@ -96,7 +94,7 @@ input.forEach((game) => {
 
     })
 
-    console.log(gameID, 'lowest_green', lowest_red + ' red', lowest_green + ' green', lowest_blue + ' blue', lowest_green * lowest_blue * lowest_red)
+    // console.log(gameID, 'lowest_green', lowest_red + ' red', lowest_green + ' green', lowest_blue + ' blue', lowest_green * lowest_blue * lowest_red)
     res2 += (lowest_green * lowest_blue * lowest_red)
 })
-console.log(res2);
+console.log('Part 2 :'+res2);
